@@ -19,11 +19,13 @@ class App extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let query = this.state.searchQuery
-    fetch(`https://uih0b7slze.execute-api.us-east-1.amazonaws.com/dev/search?kv=${query}`)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({ foods: data })
-      });
+    if (query.length > 2) {
+      fetch(`https://uih0b7slze.execute-api.us-east-1.amazonaws.com/dev/search?kv=${query}`)
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ foods: data })
+        });
+    }
   }
 
   performSearch() {
