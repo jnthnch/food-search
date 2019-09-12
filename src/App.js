@@ -99,7 +99,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="content">
-          <text className="result-text">Result</text>
+          <text className="result-text">Results</text>
           {foodItems}
         </div>
       </div>

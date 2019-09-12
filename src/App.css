@@ -16,6 +16,7 @@
   height: auto;
   justify-content: center;
   background-image: url("./assets/image.png");
+  border: 1px solid purple;
 }
 
 .header-container {
@@ -24,6 +25,7 @@
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
+  border: 1px solid purple;
 }
 
 .header-text {
@@ -55,6 +57,7 @@
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: bold;
+  border: 1px solid purple;
 }
 
 .search-input {
@@ -78,6 +81,59 @@
   background-color: #FF5600;
 }
 
-.result-text {
+.content {
+  width: 460px;
+}
 
+.result-text {
+  border: 1px solid purple;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  opacity: 100%;
+  color: #969696;
+  margin-top: 20px;
+}
+
+.food-item-box {
+  border: 1px solid purple;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+table {
+  /* border-collapse: collapse; */
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+tr {
+  border: 1px solid purple;
+  /* background-color: grey; */
+}
+
+table td {
+  white-space: nowrap;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+.item-property {
+  text-align: left;
+  width: 35%;
+  color: #969696;
+  font-size: 16px;
+  opacity: 100%;
+}
+
+.item-value{
+  text-align: left;
+  width: 65%;
+  color: #333333;
+  font-size: 18px;
+}
+
+.last-row {
+  padding-bottom: 20px;
 }
