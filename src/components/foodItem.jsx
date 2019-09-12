@@ -10,8 +10,8 @@ const FoodItem = (props) => {
     let foodDensity = calories / grams;
     if (foodDensity <= 1.0) {
       return '#16AA00'
-    } else if (foodDensity > 2.4) {
-      return '#FFCF04'
+    } else if (foodDensity >= 2.4) {
+      return '#F75462'
     } else {
       return '#FFCF04'
     }
