@@ -1,16 +1,25 @@
 import React from 'react';
 
 const FoodItem = (props) => {
-  let foodColorCode = {
-
-  }
 
   let calories = props.item.calories;
   let grams = props.item.portion;
-  let foodDensity = calories / grams;
+  let colorCode = findColorCode(calories, grams);
 
-  function FindColorCode() {
+  function findColorCode(calories, grams) {
+    let foodDensity = calories / grams;
+    if (foodDensity <= 1.0) {
+      return '#16AA00'
+    } else if (foodDensity > 2.4) {
+      return '#FFCF04'
+    } else {
+      return '#FFCF04'
+    }
+  }
 
+  let nameStyling = {
+    color: colorCode,
+    fontWeight: 'bold',
   }
 
   return (
@@ -21,7 +30,7 @@ const FoodItem = (props) => {
             <td className="item-property">
               name:
             </td>
-            <td className="item-value">
+            <td className="item-value" style={nameStyling}>
               {props.item.name}
             </td>
           </tr>
@@ -38,7 +47,7 @@ const FoodItem = (props) => {
               calories:
             </td>
             <td className="item-value">
-              {props.item.calories}
+              {props.item.calories} Cal
             </td>
           </tr>
           <tr>
@@ -51,10 +60,8 @@ const FoodItem = (props) => {
           </tr>
         </tbody>
       </table>
-
     </div>
   )
-
 }
 
 export default FoodItem;
