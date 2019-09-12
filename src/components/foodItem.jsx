@@ -1,6 +1,6 @@
 import React from 'react';
 
-const foodItem = (props) => {
+const FoodItem = (props) => {
   return (
     <div className='food-item-box'>
       <div>
@@ -20,4 +20,4 @@ const foodItem = (props) => {
 
 }
 
-export default foodItem;
+export default FoodItem;

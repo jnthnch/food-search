@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FoodItem from './components/foodItem.jsx';
+import FoodItem from './components/FoodItem.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -87,16 +87,19 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-          <div className="header-search-content">
-            <text className="Noom-Food-Explorer-Text">Noom Food Explorer</text>
-            <text className="search-text">Enter the key word:</text>
-            <form className="search-box" onSubmit={this.handleSubmit}>
-              <input className="input-box" type="text" value={this.state.value} onKeyUp={this.handleChangeDelayed} />
+          <div className="header-container">
+            <text className="header-text">Noom Food Explorer</text>
+            <form className="search-form" onSubmit={this.handleSubmit}>
+              <label for="food-search" className="search-label">Enter the key word:</label>
+              <input id="food-search" className="search-input" type="text" value={this.state.value} onKeyUp={this.handleChangeDelayed} />
               <button className="search-button" type="submit">Search</button>
             </form>
           </div>
         </div>
-        {foodItems}
+        <div className="content">
+          <text className="result-text">Result</text>
+          {foodItems}
+        </div>
       </div>
     );
   }
